@@ -45,12 +45,12 @@ app.get("/pessoas", (req, res, next) => {
   const pessoas = [
     {
       id: 1,
-      nome: "Bu",
+      nome: "Ale",
       idade: "20",
     },
     {
       id: 2,
-      nome: "ceta",
+      nome: "Sousa",
       idade: "30",
     },
   ];
