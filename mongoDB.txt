@@ -1,0 +1,4 @@
+DB_HOST=cluster0.owrfeui.mongodb.net
+DB_USER=alee
+DB_PASS=21072005
+DB_NAME=07-crud-tarefas
