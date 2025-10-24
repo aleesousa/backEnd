@@ -3,6 +3,7 @@ const app = express();
 
 app.use(express.json());
 
+// conexão com o banco de dados
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 
@@ -11,26 +12,21 @@ const DB_USER = process.env.DB_USER;
 const DB_PASS = process.env.DB_PASS;
 const DB_NAME = process.env.DB_NAME;
 
-const url =
-  "mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority&appName=Cluster0";
+const url = `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority&appName=Cluster0`;
 
 mongoose
-  .connect(
-    `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority&appName=Cluster0`
-  )
+  .connect(url)
   .then(() => {
-    console.log("conectado ao MongoDB");
+    console.log("Conectado ao MongoDB");
   })
   .catch((err) => {
-    console.log("Erro ao conectar no banco MongoDB:  ", err);
+    console.log("Erro ao conectar no banco MongoDB: ", err);
   });
 
-// controles e rotas
-const PessoaController = require('./controllers/PessoaController')
-app.use(PessoaController)
+// controladores e rotas
+const PessoaController = require("./controllers/PessoaController");
+app.use(PessoaController);
 
-// Start
 app.listen(3000, () => {
-    console.log("Aplicação rodando em  https://localhost:3000");
-  });
-  
+  console.log("Aplicação rodando em http://localhost:3000");
+});

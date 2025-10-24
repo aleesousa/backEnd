@@ -20,7 +20,6 @@ const schema = new mongoose.Schema(
   },
 
   // parametros
-
   // Salva data de criação e data de atualização do registro
   { timestamps: true }
 );
