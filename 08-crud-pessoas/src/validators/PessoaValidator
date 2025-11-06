@@ -1,5 +1,6 @@
 const yup = require("yup");
 
+
 // Esquema de validação
 const schemaNovaPessoa = yup.object().shape({
   nome: yup.string().required("O campo nome é obrigatório"),
