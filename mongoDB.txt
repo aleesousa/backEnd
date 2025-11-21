@@ -1,4 +1,4 @@
-DB_HOST=cluster0.owrfeui.mongodb.net
-DB_USER=teste
-DB_PASS=1111111
-DB_NAME=07-crud-tarefas
+DB_HOST=clusterX.xxxx.mongodb.net
+DB_USER=xxxx
+DB_PASS=xxxxxxxx
+DB_NAME=xxxxxx
